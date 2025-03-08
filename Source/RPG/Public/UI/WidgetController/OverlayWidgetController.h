@@ -31,10 +31,10 @@ public:
 	FOnMaxHealthChangedSignature OnMaxHealthChanged;
 
 	UPROPERTY(BlueprintAssignable, Category="GAS|Attributes")
-	FOnHealthChangedSignature OnManaChanged;
+	FOnManaChangedSignature OnManaChanged;
 
 	UPROPERTY(BlueprintAssignable, Category="GAS|Attributes")
-	FOnMaxHealthChangedSignature OnMaxManaChanged;
+	FOnMaxManaChangedSignature OnMaxManaChanged;
 
 protected:
 	void HealthChanged(const FOnAttributeChangeData& Data) const;
