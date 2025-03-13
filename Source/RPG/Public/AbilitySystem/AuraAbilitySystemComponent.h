@@ -4,6 +4,8 @@
 #include "AbilitySystemComponent.h"
 #include "AuraAbilitySystemComponent.generated.h"
 
+DECLARE_MULTICAST_DELEGATE_OneParam(FEffectAssetTasg, const FGameplayTagContainer& /*AssetTags*/)
+
 /**
  * 
  */
@@ -14,6 +16,8 @@ class RPG_API UAuraAbilitySystemComponent : public UAbilitySystemComponent
 
 public:
 	void AbilityActorInfoSet();
+
+	FEffectAssetTasg EffectAssetTags;
 
 protected:
 	void EffectApplied(UAbilitySystemComponent* AbilitySystemComponent, const FGameplayEffectSpec& EffectSpec, FActiveGameplayEffectHandle ActiveEffectHandle);
