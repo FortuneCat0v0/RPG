@@ -4,12 +4,13 @@
 #include "AbilitySystemInterface.h"
 #include "GameplayEffect.h"
 #include "GameFramework/Character.h"
+#include "Interaction/CombatInterface.h"
 #include "AuraCharacterBase.generated.h"
 
 class UAttributeSet;
 
 UCLASS(Abstract)
-class RPG_API AAuraCharacterBase : public ACharacter, public IAbilitySystemInterface
+class RPG_API AAuraCharacterBase : public ACharacter, public IAbilitySystemInterface, public ICombatInterface
 {
 	GENERATED_BODY()
 
